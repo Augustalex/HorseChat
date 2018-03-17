@@ -1,0 +1,16 @@
+{
+  "name": "horse-chat",
+  "version": "1.0.0",
+  "description": "A chat application where a noun in every message is replaced by a horse.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io": "^2.0.4",
+    "url": "^0.11.0",
+    "wordpos": "^1.1.6"
+  }
+}

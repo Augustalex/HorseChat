@@ -1,7 +1,7 @@
 const clientId = `${Math.round(Math.random() * 9999)}`;
 
 export default function () {
-    let socket = io('http://localhost:3000');
+    let socket = io();
     socket.on('connect', () => {
         getInput()
             .addEventListener('keypress', createInputKeydownHandler(socket));

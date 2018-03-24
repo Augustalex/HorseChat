@@ -20,7 +20,9 @@ module.exports = function () {
 
     function initServer() {
         server = http.createServer(handleServerConnection);
-        server.listen(3000);
+        let port = 3000;
+        server.listen(port);
+        console.log('Server running on port ' + port);
     }
 
     function initSocketIO() {
@@ -29,6 +31,7 @@ module.exports = function () {
     }
 
     async function handleServerConnection(req, res) {
+        console.log('Client connected');
         let parsedUrl = url.parse(req.url, true);
         if (parsedUrl.path === '/') {
             let content = await readFile(path.join(__dirname, 'index.html'));
